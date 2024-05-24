@@ -50,7 +50,7 @@
 //
 #define X_DIAG_PIN                          PG6   // X-STOP
 #define Y_DIAG_PIN                          PG9   // Y-STOP
-#define Z_DIAG_PIN                          PG10  // Z-STOP
+#define Z_DIAG_PIN                          PB7//PG10  // Z-STOP
 #define Z2_DIAG_PIN                         PG11  // Z2-STOP
 #define E0_DIAG_PIN                         PG12  // E0DET
 #define E1_DIAG_PIN                         PG13  // E1DET
@@ -188,6 +188,15 @@
   #define Z_CS_PIN                          PC6
 #endif
 
+#define E0_STEP_PIN                         PG4   // MOTOR 3
+#define E0_DIR_PIN                          PC1
+#ifndef E0_ENABLE_PIN
+  #define E0_ENABLE_PIN                     PA0
+#endif
+#ifndef E0_CS_PIN
+  #define E0_CS_PIN                         PC7
+#endif
+/*
 #define Z2_STEP_PIN                         PG4   // MOTOR 3
 #define Z2_DIR_PIN                          PC1
 #ifndef Z2_ENABLE_PIN
@@ -225,7 +234,7 @@
 #ifndef E3_CS_PIN
   #define E3_CS_PIN                         PD3
 #endif
-
+*/
 //
 // Temperature Sensors
 //
@@ -239,13 +248,13 @@
 //
 #define HEATER_BED_PIN                      PA1   // Hotbed
 #ifndef HEATER_0_PIN
-  #define HEATER_0_PIN                      PA2   // Heater0
+  #define HEATER_0_PIN                      PB11//PA2   // Heater0
 #endif
 #define HEATER_1_PIN                        PA3   // Heater1
 #ifndef HEATER_2_PIN
   #define HEATER_2_PIN                      PB10  // Heater2
 #endif
-#define HEATER_3_PIN                        PB11  // Heater3
+#define HEATER_3_PIN                        PA2//PB11  // Heater3
 
 #define FAN_PIN                             PA8   // Fan0
 #define FAN1_PIN                            PE5   // Fan1
